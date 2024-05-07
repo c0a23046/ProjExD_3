@@ -137,13 +137,13 @@ class Beam:
             screen.blit(self.img, self.rct)
 
 
-class Score:
+class Score: #スコアを作るためのクラス作成
     def __init__(self):
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.score = 0
-        self.img = self.fonto.render(f"スコア：{self.score}", 0, (0, 0, 255))
+        self.img = self.fonto.render(f"スコア：{self.score}", 0, (0, 0, 255)) #文字，スコアの色
         self.img_rct = self.img.get_rect()
-        self.img_rct.center = 100, 850
+        self.img_rct.center = 100, 850 #スコアの大きさ
 
     def update(self, screen: pg.Surface):
         self.img = self.fonto.render(f"スコア：{self.score}", 0, (0, 0, 255))
